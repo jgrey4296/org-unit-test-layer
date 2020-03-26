@@ -4,12 +4,12 @@
 ;; and use a macro to expand them, allowing the two to be defined together
 ;; simplifying the addition of new tests
 ;;
-(defstruct org-unit-test-layer/test-extracts start end heading link text)
-(defstruct org-unit-test-layer/test-group name tests link bound start)
-(defstruct org-unit-test-layer/test type locator value)
+(cl-defstruct org-unit-test-layer/test-extracts start end heading link text)
+(cl-defstruct org-unit-test-layer/test-group name tests link bound start)
+(cl-defstruct org-unit-test-layer/test type locator value)
 ;; Current test types:
 '(:section-check :length-check :order-check :citation-check :mention-check :codeblock-check :tag-check)
-(defstruct org-unit-test-layer/test-results name results link)
+(cl-defstruct org-unit-test-layer/test-results name results link)
 
 (defvar org-unit-test-layer/heading-regexp "^*+ %s$"
   "Regexp to format when searching for a location")

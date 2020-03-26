@@ -1,15 +1,15 @@
 (defconst org-unit-test-layer-packages
   '(
     org
-    parsec
+    ;; parsec
     )
   )
 
-(defun org-unit-test-layer/init-parsec ()
-  (use-package parsec
-    :commands (parsec-with-input)
-    :defer t)
-  )
+;; (defun org-unit-test-layer/init-parsec ()
+;;   (use-package parsec
+;;     :commands (parsec-with-input)
+;;     :defer t)
+;;   )
 
 (defun org-unit-test-layer/post-init-org ()
   (defun org-unit-test-layer/org-mod-map ()
